@@ -1,7 +1,7 @@
-#### Brew + Terragrunt ####
+# Brew + Terragrunt
 
-# Terraform provider upgrades doesn't always work on a mac because of missing hashes 
-for darwin_amd64 or darwin_arm64 however a Linux container with terragrunt can be 
+Terraform provider upgrades doesn't always work on a mac because of missing hashes 
+for `linux_amd64` or `darwin_arm64` however a Linux container with terragrunt can be 
 used to upgrade the providers.
 
 This Dockerfile creates a container with terragrunt and tfenv installed. It is
@@ -13,7 +13,7 @@ terragrunt/terraform repo by specifying a volume for the current working directo
  * AWS credentials, optional a config file, in $HOME/.aws
  * SSH keys in $HOME/.ssh and a known passphrase, enter SSH passphrase when prompted
  * Run from the root of the terragrunt/terraform repo
- 
+
 ### Build and run:
   ```
   docker build -t xylifyx/terragrunt -f scripts/Dockerfile .
@@ -28,5 +28,5 @@ terragrunt/terraform repo by specifying a volume for the current working directo
   ```
 ### Update .terraform.lock.hcl for all platforms
   ```
-  terragrunt providers lock -platform=darwin_amd64 -platform=linux_amd64 -platform=linux_arm64 -platform=darwin_arm64
+  terragrunt providers lock -platform=darwin_amd64 -platform=darwin_arm64 -platform=linux_amd64 -platform=linux_arm64
   ```
