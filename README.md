@@ -10,8 +10,8 @@ volumes for the .ssh and .aws directories. The container is also able to access 
 terragrunt/terraform repo by specifying a volume for the current working directory.
 
 ### Requirements:
- * AWS credentials, optional a config file, in $HOME/.aws
- * SSH keys in $HOME/.ssh and a known passphrase, enter SSH passphrase when prompted
+ * AWS credentials, optional a config file, in `$HOME/.aws`
+ * SSH keys in `$HOME/.ssh` and a known passphrase, enter SSH passphrase when prompted
  * Run from the root of the terragrunt/terraform repo
 
 ### Build and run:
