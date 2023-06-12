@@ -16,7 +16,7 @@ terragrunt/terraform repo by specifying a volume for the current working directo
 
 ### Build and run:
   ```
-  docker build -t xylifyx/terragrunt -f scripts/Dockerfile .
+  docker build -t xylifyx/terragrunt .
   docker run -v $HOME/.ssh:/root/.ssh -v $HOME/.aws:/root/.aws -v $(pwd):/ws -w /ws -it xylifyx/terragrunt
   ```
 ### Terragrunt:
